@@ -8,6 +8,7 @@ from typing import List, Dict, Any, Optional
 
 from .models import Message, conversation_manager
 from .clients import MonicaClient, OpenAIClient, GeminiClient
+from .evaluation import ConversationEvaluator, evaluate_api_responses
 
 
 def interactive_conversation(api_name, initial_prompt=None, image_url=None, api_clients=None):
@@ -155,7 +156,7 @@ def batch_test(test_cases, apis=None, api_clients=None):
     return results
 
 
-def multi_turn_test(conversation_flows, apis=None, api_clients=None):
+def multi_turn_test(conversation_flows, apis=None, api_clients=None, evaluate=True):
     """
     Run multi-turn conversation tests across multiple APIs.
     
@@ -163,6 +164,7 @@ def multi_turn_test(conversation_flows, apis=None, api_clients=None):
         conversation_flows: List of conversation flow dictionaries
         apis: List of API names to test
         api_clients: Dictionary of API clients
+        evaluate: Whether to evaluate the conversations
         
     Returns:
         results: Dictionary of results from each conversation flow
@@ -247,5 +249,20 @@ def multi_turn_test(conversation_flows, apis=None, api_clients=None):
     with open(results_file, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2, ensure_ascii=False, default=str)
     print(f"\nMulti-turn test results saved to {results_file}")
+    
+    # 评估对话质量
+    if evaluate:
+        print("\n=== Evaluating conversation quality ===")
+        evaluation_results = evaluate_api_responses(results_file)
+        
+        # 打印总体评分
+        if "overall_scores" in evaluation_results:
+            print("\n=== Overall API Scores ===")
+            for api_name, score in evaluation_results["overall_scores"].items():
+                print(f"{api_name.upper()}: {score:.2f}/1.00")
+            
+            # 找出得分最高的API
+            best_api = max(evaluation_results["overall_scores"].items(), key=lambda x: x[1])
+            print(f"\nBest performing API: {best_api[0].upper()} with score {best_api[1]:.2f}/1.00")
     
     return results

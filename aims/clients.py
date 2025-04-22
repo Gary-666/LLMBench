@@ -42,7 +42,8 @@ class MonicaClient(BaseAPIClient):
     def __init__(self, api_key, proxies=None):
         super().__init__(api_key, proxies)
         self.base_url = "https://openapi.monica.im/v1"
-        self.default_model = "gpt-4o"  # Monica的最新模型
+        # 从环境变量读取模型配置，如果没有则使用默认值
+        self.default_model = os.getenv("MONICA_MODEL", "gpt-4o")
         
     def get_client(self):
         """Get the Monica API client."""
@@ -123,8 +124,9 @@ class OpenAIClient(BaseAPIClient):
     """Client for the OpenAI API."""
     def __init__(self, api_key, proxies=None):
         super().__init__(api_key, proxies)
-        self.text_model = "gpt-4.1"  # OpenAI最先进的文本模型
-        self.vision_model = "gpt-4.1"  # OpenAI最先进的视觉模型
+        # 从环境变量读取模型配置，如果没有则使用默认值
+        self.text_model = os.getenv("OPENAI_TEXT_MODEL", "gpt-4.1")
+        self.vision_model = os.getenv("OPENAI_VISION_MODEL", "gpt-4.1")
         
     def get_client(self):
         """Get the OpenAI API client."""
@@ -206,8 +208,9 @@ class GeminiClient(BaseAPIClient):
     """Client for the Google Gemini API."""
     def __init__(self, api_key, proxies=None):
         super().__init__(api_key, proxies)
-        self.text_model = 'gemini-2.5-pro'  # Gemini最先进的文本模型
-        self.vision_model = 'gemini-2.5-pro'  # Gemini最先进的视觉模型
+        # 从环境变量读取模型配置，如果没有则使用默认值
+        self.text_model = os.getenv("GEMINI_TEXT_MODEL", 'gemini-2.5-pro')
+        self.vision_model = os.getenv("GEMINI_VISION_MODEL", 'gemini-2.5-pro')
         
     def setup(self):
         """Set up the Gemini API."""
