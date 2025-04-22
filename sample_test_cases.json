@@ -1,0 +1,26 @@
+[
+  {
+    "prompt": "介绍一下你自己，你是什么AI助手？",
+    "description": "Self-introduction in Chinese"
+  },
+  {
+    "prompt": "What are the key differences between machine learning and deep learning?",
+    "description": "Technical question about AI concepts"
+  },
+  {
+    "prompt": "Write a short poem about artificial intelligence",
+    "description": "Creative writing task"
+  },
+  {
+    "prompt": "如果我想学习编程，应该从哪种语言开始？为什么？",
+    "description": "Programming advice in Chinese"
+  },
+  {
+    "prompt": "Explain the concept of quantum computing to a 10-year-old",
+    "description": "Simplification of complex concept"
+  },
+  {
+    "prompt": "What ethical considerations should be taken into account when developing AI systems?",
+    "description": "Ethics question"
+  }
+]
