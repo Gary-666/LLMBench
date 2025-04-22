@@ -142,7 +142,7 @@ A CSV summary report is generated for each testing session, providing an overvie
 <a id="english-version"></a>
 ## English Version
 
-AIBench (formerly AIMS For Every API) is a powerful AI model evaluation framework designed to compare and test the conversational capabilities of different large language model APIs. Through standardized test scenarios and a precise scoring system, AIBench helps you objectively evaluate the performance of various AI models.
+AIBench is a powerful AI model evaluation framework designed to compare and test the conversational capabilities of different large language model APIs. Through standardized test scenarios and a precise scoring system, AIBench helps you objectively evaluate the performance of various AI models.
 
 ### ✨ Key Features
 
@@ -319,14 +319,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For any questions or suggestions, please contact us through:
 
 - Email: your.email@example.com
-- GitHub: [https://github.com/yourusername/aibench](https://github.com/yourusername/aibench)
+- GitHub: [https://github.com/Gary-666/LLMBench](https://github.com/yourusername/aibench)
 
 ---
 
 <a id="chinese-version"></a>
 ## 中文版本
 
-AIBench（前身为AIMS For Every API）是一个强大的AI模型评估框架，专为比较和测试不同大语言模型API的对话能力而设计。通过标准化的测试场景和精确的评分系统，AIBench帮助您客观评估各种AI模型的性能表现。
+AIBench是一个强大的AI模型评估框架，专为比较和测试不同大语言模型API的对话能力而设计。通过标准化的测试场景和精确的评分系统，AIBench帮助您客观评估各种AI模型的性能表现。
 
 ### ✨ 主要特性
 
