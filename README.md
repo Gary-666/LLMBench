@@ -183,7 +183,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any questions or suggestions, please contact us through:
 
-- Email: your.email@example.com
+- Email: 1095012892@qq.com
 - GitHub: [https://github.com/Gary-666/LLMBench](https://github.com/Gary-666/LLMBench)
 
 ---
@@ -367,7 +367,7 @@ Gemini API: 0.82
 
 如有任何问题或建议，请通过以下方式联系我们：
 
-- 邮箱: your.email@example.com
+- 邮箱: 1095012892@qq.com
 - GitHub: [https://github.com/Gary-666/LLMBench](https://github.com/Gary-666/LLMBench)
 
 ---
